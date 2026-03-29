@@ -74,7 +74,7 @@ python make_manuscript_figures.py
 *   **What it does:** Pulls the specific data points from the aggregated files and specific representative seeds to render the final publication-ready figures, outputting them to `results/selective_tail/manuscript_figures/`. 
 *   *Outputs generated include:*
     *   `figure1_conceptual_framing.png`
-    *   `figure2_single_run_proof_of_concept.png` (The "Smoking Gun" Edge-load vs. Curvature scatter plot)
+    *   `figure2_single_run_proof_of_concept.png`
     *   `figure3_multiseed_aggregation.png`
     *   `figure4_tail_organization_metrics.png`
     *   `figure5_regime_diagram.png`
