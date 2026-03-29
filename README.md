@@ -27,7 +27,7 @@ This project requires Python 3.9+ and the following core libraries:
 
 ## Repository Structure
 
-Based on the execution pipeline, the repository is organized as follows:
+The repository is organized as follows:
 
 ```text
 beyond_mean_curvature/
