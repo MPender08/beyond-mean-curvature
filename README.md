@@ -5,6 +5,11 @@
 **Author:** Matthew A. Pender (Independent Researcher)
 **Preprint / Zenodo DOI:** [Insert Zenodo DOI here]
 
+![fig2](results/selective_tail/manuscript_figures/figure2_single_run_proof_of_concept.png)
+
+**Figure 2. Sparse lower-tail structure shapes transport differently than random placement.**
+**(A)** Single-run values of the composite objective (J) across targeted and random sparse-placement conditions at three edge budgets. **(B)** Single-run tail load fraction across the same conditions, showing that targeted placement can route a larger share of total traffic through the lower-curvature tail. **(C–D)** Edge-level transport load versus edge curvature for `targeted_n10` and `random_n10`, respectively. In both cases, q10-tail edges bear disproportionate transport load relative to much of the remaining graph, supporting the claim that the lower curvature tail is a genuine load-bearing routing structure. This figure is intended as a proof-of-concept visualization of the mechanism; the stability and regime dependence of these effects are evaluated in the repeated-seed analyses that follow. 
+
 ## Overview
 This repository contains the complete Python simulation suite, optimal transport logic, and graph-geometric metrics used to generate the results for the paper *"Beyond Mean Curvature: Lower-Tail Routing Structure in Controlled Hierarchical Networks."* 
 
