@@ -1,0 +1,93 @@
+{
+  "config": {
+    "name": "targeted_vs_random",
+    "seed": 45,
+    "rng": "np.random.default_rng(45)",
+    "branching": 2,
+    "depth": 4,
+    "same_depth_only": true,
+    "min_graph_distance": 4,
+    "max_candidates": 150,
+    "max_distal_weight": 5.0,
+    "min_distal_weight": 0.5,
+    "default_distal_weight": 0.8,
+    "orc_alpha": 0.5,
+    "weight_attr": "weight",
+    "tail_quantile": 0.1,
+    "tail_quantiles": [
+      0.05,
+      0.1,
+      0.25
+    ],
+    "n_pairs": 1000,
+    "weighted_transport": true,
+    "maintenance": {
+      "active_edge_penalty": 1.0,
+      "distal_weight_penalty_scale": 1.0,
+      "curvature_tail_penalty_scale": 0.0
+    },
+    "objective_weights": {
+      "transport": 1.0,
+      "maintenance": 1.0,
+      "congestion": 0.03,
+      "betweenness": 2.0
+    },
+    "results_dir": "results/selective_tail/seed_45",
+    "conditions": [
+      {
+        "name": "targeted_n05",
+        "mode": "sparse_tail",
+        "n_active": 5,
+        "distal_weight": 0.8,
+        "placement_mode": "targeted",
+        "edge_score_fn": "max_depth_separation"
+      },
+      {
+        "name": "random_n05",
+        "mode": "sparse_tail",
+        "n_active": 5,
+        "distal_weight": 0.8,
+        "placement_mode": "random"
+      },
+      {
+        "name": "targeted_n10",
+        "mode": "sparse_tail",
+        "n_active": 10,
+        "distal_weight": 0.8,
+        "placement_mode": "targeted",
+        "edge_score_fn": "max_depth_separation"
+      },
+      {
+        "name": "random_n10",
+        "mode": "sparse_tail",
+        "n_active": 10,
+        "distal_weight": 0.8,
+        "placement_mode": "random"
+      },
+      {
+        "name": "targeted_n20",
+        "mode": "sparse_tail",
+        "n_active": 20,
+        "distal_weight": 0.8,
+        "placement_mode": "targeted",
+        "edge_score_fn": "max_depth_separation"
+      },
+      {
+        "name": "random_n20",
+        "mode": "sparse_tail",
+        "n_active": 20,
+        "distal_weight": 0.8,
+        "placement_mode": "random"
+      }
+    ]
+  },
+  "n_conditions": 6,
+  "condition_names": [
+    "targeted_n05",
+    "random_n05",
+    "targeted_n10",
+    "random_n10",
+    "targeted_n20",
+    "random_n20"
+  ]
+}
