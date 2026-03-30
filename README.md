@@ -35,7 +35,10 @@ beyond_mean_curvature/
 │
 ├── run_selective_tail_experiment.py     # Main entry point for running simulation configurations
 ├── aggregate_selective_tail_results.py  # Computes paired-differences & statistics across seeds
-├── make_manuscript_figures.py           # Generates the final, formatted figures for the paper
+├── make_manuscript_figures.py           # Generates figures 1-5 for the paper
+│
+├── build_thermo_stress_test.py          # Builds the thermodynamic stress-test summaries and ranking table
+├── plot_figure6_dissipation_summary.py  # Generates figure 6 for the paper
 │
 ├── experiment_configs.py                # Defines experimental presets (e.g., 'targeted_vs_random')
 ├── selective_tail_utils.py              # Graph generation, distal candidate generation, and placement
@@ -48,12 +51,13 @@ beyond_mean_curvature/
         ├── seed_42/                     # Raw CSV, JSON, and diagnostic plots per random seed
         ├── seed_43/                     # ...
         ├── aggregated/                  # Multi-seed CSV summaries and paired-difference error bar plots
+        │   └── thermo_stress_test/      # Raw CSV and JSON for the thermodynamic stress-test
         └── manuscript_figures/          # Final paper-ready PNGs (Figure 1 through Figure 5)
 ```
 
 ## How to Replicate the Study
 
-The experimental pipeline is broken into three distinct steps to allow for modular testing, debugging, and visualization.
+The experimental pipeline is broken into four distinct steps to allow for modular testing, debugging, and visualization.
 
 ### Step 1: Run the Core Simulations
 To run the primary experiment comparing Targeted vs. Random shortcut placement across multiple edge budgets and random seeds, execute:
@@ -71,8 +75,8 @@ python aggregate_selective_tail_results.py
 ```
 *   **What it does:** Crawls the individual `seed_<X>` directories, concatenates the results, and calculates paired differences (Targeted minus Random) for metrics like `Tail Efficiency Ratio` ($TER$) and `Tail Burden Concentration` ($TBC$). It outputs summary `.csv` files and diagnostic `.png` error-bar charts to `results/selective_tail/aggregated/`.
 
-### Step 3: Generate Manuscript Figures
-To reproduce the exact figures used in the final manuscript, execute:
+### Step 3: Generate Manuscript Figures 1-5
+To reproduce the figures used in the final manuscript, execute:
 
 ```bash
 python make_manuscript_figures.py
@@ -84,6 +88,19 @@ python make_manuscript_figures.py
     *   `figure3_multiseed_aggregation.png`
     *   `figure4_tail_organization_metrics.png`
     *   `figure5_regime_diagram.png`
+
+### Step 4: Build and Generate Stress-Test Figure
+To reproduce figure 6, first build the data:
+
+```bash
+python build_thermo_stress_test.py
+```
+
+Then, generate the figure:
+
+```bash
+python plot_figure6_dissipation_summary.py
+```
 
 ## Key Metrics Calculated
 The simulation suite tracks several phenomenological and geometric variables defined in the paper:
