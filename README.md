@@ -3,7 +3,8 @@
 # Beyond Mean Curvature: Lower-Tail Routing Structure in Controlled Hierarchical Networks
 
 **Author:** Matthew A. Pender (Independent Researcher)
-**Preprint / Zenodo DOI:** [Insert Zenodo DOI here]
+
+**Preprint / Zenodo DOI:** [https://doi.org/10.5281/zenodo.19324674](https://doi.org/10.5281/zenodo.19324674)
 
 ![fig2](results/selective_tail/manuscript_figures/figure2_single_run_proof_of_concept.png)
 
