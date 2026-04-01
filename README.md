@@ -110,3 +110,7 @@ The simulation suite tracks several phenomenological and geometric variables def
 *   **Tail Burden Concentration ($TBC$):** The ratio of mean tail-edge load to mean non-tail-edge load, identifying "hot" concentrated exploitation vs. distributed recruitment.
 
 ***
+
+### Acknowledgments
+
+During development, Google Gemini and OpenAI ChatGPT were used for brainstorming, structural organization, debugging assistance, and stylistic refinement. Final interpretation, analysis decisions, and manuscript claims remain the responsibility of the author.
